@@ -3,7 +3,12 @@ interface ButtonProps {
   variant: 'hero' | 'outline' | 'cta';
   size: 'lg' | 'md' | 'sm';
   className?: string;
+  OnClick?: () => void;
 }
+
+
+
+
 
 export const Button = ({ children, variant, size, className }: ButtonProps) => {
   const baseStyles = "inline-flex items-center justify-center font-semibold transition-colors duration-300";

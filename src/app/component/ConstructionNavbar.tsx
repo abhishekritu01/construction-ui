@@ -34,11 +34,13 @@ const ConstructionNavbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {[
-              { name: 'Home', href: '#home' },
-              { name: 'Services', href: '#services' },
-              { name: 'Projects', href: '#projects' },
-              { name: 'About', href: '#about' },
-              { name: 'Contact', href: '#contact' }
+              { name: 'Home', href: '/' },
+              { name: 'About', href: '/about' },
+              { name: 'Services', href: '/services' },
+              { name: 'Projects', href: '/projects' },
+              { name: 'Testimonials', href: '/testimonials' },
+              { name: 'FAQ', href: '/faq' },
+              { name: 'Contact', href: '/contact' }
             ].map((item) => (
               <Link 
                 key={item.name}
@@ -50,12 +52,13 @@ const ConstructionNavbar = () => {
               </Link>
             ))}
             
-            <button className="ml-4 px-6 py-2 bg-yellow-400 text-gray-900 font-bold rounded-md hover:bg-yellow-500 transition-colors flex items-center">
+            <Link href={'/quote'}
+             className="ml-4 px-6 py-2 bg-yellow-400 text-gray-900 font-bold rounded-md hover:bg-yellow-500 transition-colors flex items-center">
               Get Quote
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-2">
                 <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
               </svg>
-            </button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -79,11 +82,13 @@ const ConstructionNavbar = () => {
         <div className={`md:hidden ${mobileMenuOpen ? 'block' : 'hidden'} mt-4 pb-4 transition-all duration-300`}>
           <div className="flex flex-col space-y-3">
             {[
-              { name: 'Home', href: '#home' },
-              { name: 'Services', href: '#services' },
-              { name: 'Projects', href: '#projects' },
-              { name: 'About', href: '#about' },
-              { name: 'Contact', href: '#contact' }
+              { name: 'Home', href: '/' },
+              { name: 'About', href: '/about' },
+              { name: 'Services', href: '/services' },
+              { name: 'Projects', href: '/projects' },
+              { name: 'Testimonials', href: '/testimonials' },
+              { name: 'FAQ', href: '/faq' },
+              { name: 'Contact', href: '/contact' }
             ].map((item) => (
               <Link 
                 key={item.name}
@@ -95,12 +100,13 @@ const ConstructionNavbar = () => {
               </Link>
             ))}
             
-            <button className="mt-2 px-4 py-3 bg-yellow-400 text-gray-900 font-bold rounded-md hover:bg-yellow-500 transition-colors flex items-center justify-center">
+            <Link href={'/quote'}
+            className="mt-2 px-4 py-3 bg-yellow-400 text-gray-900 font-bold rounded-md hover:bg-yellow-500 transition-colors flex items-center justify-center">
               Get Quote
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-2">
                 <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
